@@ -5,53 +5,151 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Virmo Privacy Policy</title>
     <style>
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; scroll-padding-top: 28px; }
       body {
         margin: 0;
-        padding: 32px 22px;
-        background: #f8fafc;
+        background: radial-gradient(ellipse at 5% 5%, #d8f3dc 0, transparent 45%), radial-gradient(ellipse at 95% 25%, #f2edfc 0, transparent 45%), #f8fafc;
         color: #0f172a;
-        font: 16px/1.7 -apple-system, BlinkMacSystemFont, sans-serif;
+        font: 16px/1.8 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       }
-      main {
-        max-width: 760px;
-        margin: auto;
+      a { color: #0f5238; text-underline-offset: 4px; }
+      a:focus-visible { outline: 3px solid #7e60bf; outline-offset: 5px; }
+      .skip { position: absolute; left: 24px; top: -100px; }
+      .skip:focus { top: 12px; background: white; padding: 12px; z-index: 2; }
+      .layout { max-width: 1180px; margin: auto; padding: 64px 40px 80px; display: grid; grid-template-columns: 248px minmax(0, 1fr); gap: 64px; }
+      aside { align-self: start; position: sticky; top: 40px; }
+      .brand { font-size: 36px; font-weight: 800; letter-spacing: -2px; color: #0f5238; }
+      .tagline { margin: 0 0 32px; font-size: 14px; color: #475569; }
+      .documents { display: grid; gap: 8px; margin-bottom: 32px; }
+      .documents a { padding: 10px 16px; border-radius: 16px; text-decoration: none; font-weight: 600; }
+      .documents a[aria-current] { background: #0f5238; color: white; }
+      .contents { border-top: 1px solid #bdcfc5; padding-top: 20px; }
+      .contents span { color: #475569; font-size: 12px; letter-spacing: 2px; font-weight: 700; }
+      .contents ol { padding-left: 22px; font-size: 13px; line-height: 1.6; }
+      .contents li { padding: 5px 0 5px 4px; color: #64748b; }
+      .contents a { text-decoration: none; color: #475569; }
+      .contents a:hover { text-decoration: underline; }
+      main { min-width: 0; }
+      .intro { padding: 32px 0 36px; }
+      .eyebrow { display: inline-block; background: #f2edfc; color: #594181; border-radius: 24px; padding: 5px 14px; font-size: 12px; font-weight: 700; letter-spacing: 1px; }
+      h1 { font-size: clamp(36px, 5vw, 60px); line-height: 1.12; letter-spacing: -2px; margin: 22px 0; }
+      .intro p { color: #475569; max-width: 600px; }
+      article { border: 1px solid #dbe5df; border-radius: 28px; background: rgba(255,255,255,.88); padding: 10px 36px; }
+      section { padding: 28px 0; border-bottom: 1px solid #e2e8f0; }
+      section:last-child { border: 0; }
+      .number { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 12px; background: #d8f3dc; color: #0f5238; font-size: 12px; font-weight: 700; margin-bottom: 12px; }
+      section:nth-child(3n+2) .number { background: #f2edfc; color: #594181; }
+      section:nth-child(3n) .number { background: #fff1ed; color: #88402c; }
+      h2 { margin: 0 0 12px; font-size: 21px; line-height: 1.4; letter-spacing: -.4px; }
+      section p { margin: 0; overflow-wrap: anywhere; }
+      footer { padding: 24px 4px; font-size: 14px; }
+      @media (max-width: 760px) {
+        .layout { display: block; padding: 24px 20px 36px; }
+        aside { position: static; }
+        .brand { font-size: 30px; }
+        .tagline { margin-bottom: 20px; }
+        .documents { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+        .documents a { font-size: 14px; }
+        .contents { display: none; }
+        .intro { padding: 24px 0; }
+        article { padding: 0 22px; border-radius: 24px; }
+        section { padding: 24px 0; }
       }
-      h1, h2 {
-        color: #0f5238;
-        line-height: 1.3;
+      @media (prefers-reduced-motion: reduce) {
+        html { scroll-behavior: auto; }
       }
-      h2 {
-        margin-top: 30px;
-        font-size: 21px;
-      }
-      a {
-        color: #0f5238;
+      @media print {
+        body { background: white; }
+        .layout { display: block; padding: 0; }
+        aside, .skip { display: none; }
+        article { border: 0; padding: 0; }
+        section { break-inside: avoid; }
       }
     </style>
   </head>
   <body>
-    <main>
-      <h1>Privacy Policy</h1>
-      <p>Effective November 10, 2026. This policy describes how Virmo handles information when you use its pet health diary.</p>
-      <h2>Information you choose to save</h2>
-      <p>Virmo stores pet names, species, breed, birthdays, sex, microchip information, weight, care dates, medication instructions, symptom observations, expenses, photos and audio voice notes that you choose to enter. This information is stored in the application storage on your device.</p>
-      <h2>Device permissions</h2>
-      <p>Camera permission is used to take pet and medical record photos. Photo library permission is used to select images for a pet or record. Microphone permission is used to record a voice note. Notification permission is used for local care reminders. Permission is requested through the system. You can change access in device Settings and continue using text records without camera, photo or microphone access.</p>
-      <h2>Local storage and backups</h2>
-      <p>Virmo does not operate a remote account or upload your pet records to an application server. Your device may include application data in a backup depending on your Apple settings. Exported archives contain the records and media you include, so keep those files in a place you trust. You control any copies stored outside Virmo.</p>
-      <h2>Sharing and third-party services</h2>
-      <p>Virmo does not send your health records, photos or voice notes to third-party analysis services. If you choose to share a PDF or archive, the destination you select receives that file with your permission. Apple processes purchases through the App Store under its own policies. Remote privacy and terms pages are retrieved from the configured website, which may receive ordinary connection information such as an IP address.</p>
-      <h2>Purchases</h2>
-      <p>Verified App Store transaction identifiers and the remaining PDF export balance are stored locally to deliver purchased exports and prevent duplicate delivery. Virmo does not receive your full payment card information. Purchase processing and refund decisions are handled by Apple.</p>
-      <h2>Retention and deletion</h2>
-      <p>Records remain until you delete them or erase local data. Deleting a health record removes its linked media from application storage. Erasing pet data retains the purchase ledger and remaining export balance to preserve purchased items. Removing the application may remove local data. Copies you previously shared or backed up must be managed at their destination.</p>
-      <h2>Security and choices</h2>
-      <p>Virmo uses the device application sandbox and file protection for saved records and media. No storage method guarantees complete security. Protect your device and backups. You may edit or delete saved records, export a health archive, and manage permissions in Settings.</p>
-      <h2>Children and changes</h2>
-      <p>Virmo is intended for pet caregivers and does not intentionally collect information from children through a remote service. This policy may change when app behavior changes. The effective date identifies the current text.</p>
-      <h2>Contact</h2>
-      <p>Questions about this policy may be addressed to virmo.care.desk@gmail.com.</p>
-      <p><a href="https://virmoo.github.io/legal-site/terms/">Terms of Use</a></p>
-    </main>
+    <a class="skip" href="#content">Skip to content</a>
+    <div class="layout">
+      <aside aria-label="Legal documents">
+        <div class="brand">Virmo</div>
+        <p class="tagline">A little care, every day.</p>
+        <nav class="documents" aria-label="Documents">
+          <a href="https://virmoo.github.io/legal-site/privacy/" aria-current="page">Privacy Policy</a>
+          <a href="https://virmoo.github.io/legal-site/terms/">Terms of Use</a>
+        </nav>
+        <nav class="contents" aria-label="On this page">
+          <span>IN THIS DOCUMENT</span>
+          <ol>
+            <li><a href="#section-1">Information you choose to save</a></li>
+            <li><a href="#section-2">Device permissions</a></li>
+            <li><a href="#section-3">Local storage and backups</a></li>
+            <li><a href="#section-4">Sharing and third-party services</a></li>
+            <li><a href="#section-5">Purchases</a></li>
+            <li><a href="#section-6">Retention and deletion</a></li>
+            <li><a href="#section-7">Security and choices</a></li>
+            <li><a href="#section-8">Children and changes</a></li>
+            <li><a href="#section-9">Contact</a></li>
+          </ol>
+        </nav>
+      </aside>
+      <main id="content">
+        <header class="intro">
+          <div class="eyebrow">PET CARE / LEGAL</div>
+          <h1>Privacy Policy</h1>
+          <p>Effective November 10, 2026. This policy describes how Virmo handles information when you use its pet health diary.</p>
+        </header>
+        <article aria-label="Privacy Policy">
+          <section id="section-1" aria-labelledby="heading-1">
+            <span class="number" aria-hidden="true">01</span>
+            <h2 id="heading-1">Information you choose to save</h2>
+            <p>Virmo stores pet names, species, breed, birthdays, sex, microchip information, weight, care dates, medication instructions, symptom observations, expenses, photos and audio voice notes that you choose to enter. This information is stored in the application storage on your device.</p>
+          </section>
+          <section id="section-2" aria-labelledby="heading-2">
+            <span class="number" aria-hidden="true">02</span>
+            <h2 id="heading-2">Device permissions</h2>
+            <p>Camera permission is used to take pet and medical record photos. Photo library permission is used to select images for a pet or record. Microphone permission is used to record a voice note. Notification permission is used for local care reminders. Permission is requested through the system. You can change access in device Settings and continue using text records without camera, photo or microphone access.</p>
+          </section>
+          <section id="section-3" aria-labelledby="heading-3">
+            <span class="number" aria-hidden="true">03</span>
+            <h2 id="heading-3">Local storage and backups</h2>
+            <p>Virmo does not operate a remote account or upload your pet records to an application server. Your device may include application data in a backup depending on your Apple settings. Exported archives contain the records and media you include, so keep those files in a place you trust. You control any copies stored outside Virmo.</p>
+          </section>
+          <section id="section-4" aria-labelledby="heading-4">
+            <span class="number" aria-hidden="true">04</span>
+            <h2 id="heading-4">Sharing and third-party services</h2>
+            <p>Virmo does not send your health records, photos or voice notes to third-party analysis services. If you choose to share a PDF or archive, the destination you select receives that file with your permission. Apple processes purchases through the App Store under its own policies. Remote privacy and terms pages are retrieved from the configured website, which may receive ordinary connection information such as an IP address.</p>
+          </section>
+          <section id="section-5" aria-labelledby="heading-5">
+            <span class="number" aria-hidden="true">05</span>
+            <h2 id="heading-5">Purchases</h2>
+            <p>Verified App Store transaction identifiers and the remaining PDF export balance are stored locally to deliver purchased exports and prevent duplicate delivery. Virmo does not receive your full payment card information. Purchase processing and refund decisions are handled by Apple.</p>
+          </section>
+          <section id="section-6" aria-labelledby="heading-6">
+            <span class="number" aria-hidden="true">06</span>
+            <h2 id="heading-6">Retention and deletion</h2>
+            <p>Records remain until you delete them or erase local data. Deleting a health record removes its linked media from application storage. Erasing pet data retains the purchase ledger and remaining export balance to preserve purchased items. Removing the application may remove local data. Copies you previously shared or backed up must be managed at their destination.</p>
+          </section>
+          <section id="section-7" aria-labelledby="heading-7">
+            <span class="number" aria-hidden="true">07</span>
+            <h2 id="heading-7">Security and choices</h2>
+            <p>Virmo uses the device application sandbox and file protection for saved records and media. No storage method guarantees complete security. Protect your device and backups. You may edit or delete saved records, export a health archive, and manage permissions in Settings.</p>
+          </section>
+          <section id="section-8" aria-labelledby="heading-8">
+            <span class="number" aria-hidden="true">08</span>
+            <h2 id="heading-8">Children and changes</h2>
+            <p>Virmo is intended for pet caregivers and does not intentionally collect information from children through a remote service. This policy may change when app behavior changes. The effective date identifies the current text.</p>
+          </section>
+          <section id="section-9" aria-labelledby="heading-9">
+            <span class="number" aria-hidden="true">09</span>
+            <h2 id="heading-9">Contact</h2>
+            <p>Questions about this policy may be addressed to virmo.petcare.inquiries@gmail.com.</p>
+          </section>
+        </article>
+        <footer>
+          <a href="https://virmoo.github.io/legal-site/terms/">Terms of Use</a>
+        </footer>
+      </main>
+    </div>
   </body>
 </html>
